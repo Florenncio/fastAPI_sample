@@ -8,11 +8,11 @@ from to_do.repository import user
 
 router = APIRouter(
     prefix='/user',
-    tag=['Users']
+    tags=['Users']
 )
 
 get_db = database.get_db
 
-@router.post('/')
-def criar_usuario(request: schemas.User, db: Session = Depends(get_db)):
+@router.post('/create')
+def create_user(request: schemas.User, db: Session = Depends(get_db)):
     return user.create(request, db)

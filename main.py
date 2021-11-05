@@ -5,6 +5,6 @@ from  to_do.routers import user
 
 app = FastAPI()
 
-models.Base.metadata.create_all()
+models.Base.metadata.create_all(engine)
 
 app.include_router(user.router)
