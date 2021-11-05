@@ -1,15 +1,10 @@
-from typing import Optional
-
 from fastapi import FastAPI
+from to_do import  models
+from to_do.database import engine
+from  to_do.routers import user
 
 app = FastAPI()
 
+models.Base.metadata.create_all()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+app.include_router(user.router)

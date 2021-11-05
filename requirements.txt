@@ -6,12 +6,14 @@ contextlib2==21.6.0
 contextvars==2.4
 dataclasses==0.8
 fastapi==0.70.0
+greenlet==1.1.2
 h11==0.12.0
 idna==3.3
 immutables==0.16
 importlib-metadata==4.8.1
 pydantic==1.8.2
 sniffio==1.2.0
+SQLAlchemy==1.4.26
 starlette==0.16.0
 typing-extensions==3.10.0.2
 uvicorn==0.15.0
