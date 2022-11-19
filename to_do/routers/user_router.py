@@ -20,6 +20,6 @@ def get_user(id_user: int, db: Session = Depends(get_db)):
     return user_repository.show(id_user, db)
 
 
-@router.get("get/all", response_model=List[schemas.User.View])
+@router.get("/get/all", response_model=List[schemas.User.View])
 def get_all_users(db: Session = Depends(get_db)):
     return user_repository.all(db)
