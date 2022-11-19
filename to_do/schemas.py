@@ -36,6 +36,7 @@ class Task:
         pass
 
     class View(Base):
+        id: int
         titulo: str
         descricao: str
         prioridade: Choice.TaskEnum
@@ -62,6 +63,7 @@ class Plan:
         pass
 
     class View(Base):
+        id: int
         titulo: str
         descricao: str
         tag: Choice.PlanEnum
@@ -73,15 +75,16 @@ class Plan:
 
 
 class User:
-    class Base(BaseModel):
+    class BaseUser(BaseModel):
         nome: str
         email: EmailStr
         password: str
 
-    class Create(Base):
+    class Create(BaseUser):
         pass
 
     class View(BaseModel):
+        id: int
         nome: str
         email: str
         plans: List[Plan.Base]

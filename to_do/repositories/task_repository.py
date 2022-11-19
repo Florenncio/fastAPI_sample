@@ -1,6 +1,5 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-
 from to_do import models, schemas
 
 
@@ -32,6 +31,12 @@ def show(id_task: int, db: Session):
         )
 
     return task
+
+
+def all(db: Session):
+    tasks = db.query(models.Task).all()
+
+    return tasks
 
 
 def update(id_task: int, request: schemas.Task.Base, db: Session):

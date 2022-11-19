@@ -2,7 +2,7 @@
 
 Nesse repositório estou criando API para um 'To Do List', utilizando [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), [Pydantic](https://pydantic-docs.helpmanual.io/), [Uvicorn](https://www.uvicorn.org/) e outras bibliotecas legais, com banco de dados SQLite 😁
 
-## ERD
+## Entity Relationship Diagram (ERD):
 
 <img src="./fastapi_todo_erd.png" alt="ERD" width="800"/>
 
@@ -10,7 +10,7 @@ Nesse repositório estou criando API para um 'To Do List', utilizando [FastAPI](
 
 > Utilize Python 3.8 ou superior.
 
-1. Instalando o gerenciador de pacote e, posteriormente, ativá-lo na pasta onde está o projeto:
+1. Instalando o gerenciador de dependencias e, posteriormente, ativá-lo na pasta onde está o projeto:
 
     ```bash
     pip install poetry
